@@ -1,5 +1,5 @@
 package: community.lazycat.app.catflap
-version: 0.2.10
+version: 0.2.11
 name: Catflap
 description: Manage existing LightOS instances and open their Terminal and Remote Desktop entries.
 min_os_version: 1.5.2
