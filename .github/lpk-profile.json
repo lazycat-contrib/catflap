@@ -1,0 +1,10 @@
+{
+  "name": "Catflap",
+  "packageId": "community.lazycat.app.catflap",
+  "tagPrefix": "v",
+  "artifactPrefix": "catflap-lpk-v",
+  "workflow": "release.yml",
+  "binary": "catflapd",
+  "contentFiles": ["catflapd", "THIRD_PARTY_NOTICES.md", "build-info.txt"],
+  "exports": []
+}

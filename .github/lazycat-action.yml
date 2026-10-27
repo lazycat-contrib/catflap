@@ -1,0 +1,28 @@
+version: 1
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/application.lpk
+  target_arch: amd64
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: git
+  sync_homepage: false
+  sync_license: false
+build:
+  run_buildscript: false
+images: []
+stores:
+  official:
+    enabled: false
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: Catflap
+    summary: 管理 LightOS、MicroVM、终端与远程桌面。
+release:
+  use_github_release_notes: true
+  store_changelog_format: plain

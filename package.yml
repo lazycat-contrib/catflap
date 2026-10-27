@@ -1,0 +1,28 @@
+package: community.lazycat.app.catflap
+version: 0.2.10
+name: Catflap
+description: Manage existing LightOS instances and open their Terminal and Remote Desktop entries.
+min_os_version: 1.5.2
+admin_only: false
+homepage: https://github.com/lazycat-contrib/catflap
+author: ca-x
+license: GPL-3.0-only
+permissions:
+  required:
+    - lightos.manage
+    - device.kvm
+    - vt.display
+    - document.write
+    - net.internet
+    - lzcapp.user_delegate
+import_resources:
+  - kind: lightos.webshell
+  - kind: skills
+  - kind: mcp-providers
+locales:
+  zh:
+    name: Catflap
+    description: 管理现有 LightOS 实例并打开终端和远程桌面入口。
+  en:
+    name: Catflap
+    description: Manage existing LightOS instances and open Terminal and Remote Desktop entries.

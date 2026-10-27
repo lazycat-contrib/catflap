@@ -1,0 +1,22 @@
+application:
+  gpu_accel: true
+  kvm_accel: true
+  health_check:
+    disable: true
+  subdomain: catflap
+  multi_instance: true
+  public_path:
+    - /terminal/
+    - /desktop/
+    - /mcp/
+    - /unsafe_api/
+  routes:
+    - /=exec://18082,/lzcapp/pkg/content/catflapd
+  environment:
+    - CATFLAP_MODE=lazycat
+    - CATFLAP_LISTEN=127.0.0.1:18082
+    - CATFLAP_LIGHTOSCTL=/lzcinit/lightosctl
+    - CATFLAP_STATE_DIR=/lzcapp/var/catflap
+    - CATFLAP_REQUEST_TIMEOUT_SECS=10
+ext_config:
+  enable_clientfs_access: true
